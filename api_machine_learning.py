@@ -155,7 +155,5 @@ def predict():
         return jsonify({'error': 'An error occurred during prediction.'}), 500
 
 if __name__ == '__main__':
-    # Use environment variable for port or default to 5000
-    port = int(os.environ.get('PORT', 5000))
-    # Run on 0.0.0.0 to be accessible externally if needed
-    app.run(host='0.0.0.0', port=port, debug=True) # Set debug=False for production
+    
+    app.run(debug=True) # Set debug=False for production
