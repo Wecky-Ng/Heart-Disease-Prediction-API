@@ -3,6 +3,7 @@ import joblib
 import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify
+from flask_cors import CORS # Import CORS
 # Removed database imports: mysql.connector, Error
 from dotenv import load_dotenv
 
@@ -10,6 +11,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+# Initialize CORS, allowing requests from your Vercel frontend
+CORS(app, resources={r"/predict": {"origins": "https://heart-disease-ai-fyp.vercel.app"}})
 
 # --- Removed Database Configuration ---
 
