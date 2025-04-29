@@ -101,7 +101,7 @@ def predict():
 
         # Ensure all expected features are present, provide defaults if necessary
         # Derive AgeCategory from Age
-        age = data.get('Age')
+        age = data.get('age')
         if age is None:
             return jsonify({'error': 'Missing input feature: Age'}), 400
         try:
