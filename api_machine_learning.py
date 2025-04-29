@@ -14,7 +14,7 @@ app = Flask(__name__)
 # --- Removed Database Configuration ---
 
 # --- Model Loading ---
-MODEL_PATH = 'tuned_ensemble_cat_lgbm_v4.pkl' # Ensure this model file is in the same directory or provide the correct path
+MODEL_PATH = 'tuned_ensemble_cat_lgbm_v5.pkl' # Ensure this model file is in the same directory or provide the correct path
 model = None
 try:
     model = joblib.load(MODEL_PATH)
